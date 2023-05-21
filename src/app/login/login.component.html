@@ -1,0 +1,33 @@
+<div class="card mb-3" style="max-width: 540px;text-decoration-color: aliceblue;">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="..." class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8" style="font-family: cursive;background-color: rgb(169, 169, 230);">
+            <div class="card-body">
+                <h5 class="card-title">Login</h5>
+                <div>
+                    <form [formGroup]="loginForm">
+                        <label>Email</label>
+                        <input class="form-control" type="text" placeholder="Email" formControlName="email" />
+                        <div *ngIf="loginForm.get('email').hasError('required') && loginForm.get('email').touched">
+                            Username is required
+                        </div>
+                        <label>Passworsd</label>
+                        <input class="form-control" type="text" placeholder="Password" formControlName="pswd" />
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            accept terms and conditions
+                        </label>
+                        <div>
+                            <button class="btn btn-primary loginBtnStyle" type="submit">Login</button>
+                        </div>
+                        <div>
+                            <span>you dont have acount Please?Register</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
